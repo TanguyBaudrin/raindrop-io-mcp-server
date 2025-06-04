@@ -1,4 +1,8 @@
-import { CollectionsResponse, SearchResponse, HighlightsResponse } from "../types/index.js";
+import {
+  CollectionsResponse,
+  SearchResponse,
+  HighlightsResponse,
+} from "../types/index.js";
 
 const RAINDROP_API_BASE = "https://api.raindrop.io/rest/v1";
 
@@ -70,7 +74,9 @@ export class RaindropAPI {
     );
   }
 
-  async listHighlights(searchParams: URLSearchParams): Promise<HighlightsResponse> {
+  async listHighlights(
+    searchParams: URLSearchParams,
+  ): Promise<HighlightsResponse> {
     return this.makeRequest<HighlightsResponse>(
       `/highlights?${searchParams.toString()}`,
     );

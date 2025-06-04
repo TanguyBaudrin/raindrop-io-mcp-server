@@ -107,7 +107,8 @@ export const tools: Tool[] = [
         },
         color: {
           type: "string",
-          description: "Color of the highlight (e.g., yellow, blue, green, red)",
+          description:
+            "Color of the highlight (e.g., yellow, blue, green, red)",
         },
         tags: {
           type: "array",
@@ -126,7 +127,8 @@ export const tools: Tool[] = [
       properties: {
         raindropId: {
           type: "number",
-          description: "ID of specific bookmark to get highlights from (optional)",
+          description:
+            "ID of specific bookmark to get highlights from (optional)",
         },
         page: {
           type: "number",
@@ -159,7 +161,8 @@ export const tools: Tool[] = [
         },
         color: {
           type: "string",
-          description: "Updated color of the highlight (e.g., yellow, blue, green, red)",
+          description:
+            "Updated color of the highlight (e.g., yellow, blue, green, red)",
         },
         tags: {
           type: "array",
