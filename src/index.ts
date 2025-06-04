@@ -9,8 +9,8 @@ import dotenv from "dotenv";
 import { z } from "zod";
 import { RaindropAPI } from "./lib/raindrop-api.js";
 import { tools } from "./lib/tools.js";
-import { 
-  CreateBookmarkSchema, 
+import {
+  CreateBookmarkSchema,
   SearchBookmarksSchema,
   CreateHighlightSchema,
   ListHighlightsSchema,
