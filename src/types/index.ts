@@ -29,6 +29,10 @@ export const SearchBookmarksSchema = z.object({
   word: z.boolean().optional(),
 });
 
+export const DeleteBookmarkSchema = z.object({
+  id: z.number().int().positive(),
+});
+
 export const UpdateBookmarkSchema = z.object({
   id: z.number(),
   title: z.string().optional(),
@@ -39,6 +43,7 @@ export const UpdateBookmarkSchema = z.object({
 // Zodスキーマから型を生成
 export type CreateBookmarkParams = z.infer<typeof CreateBookmarkSchema>;
 export type SearchBookmarksParams = z.infer<typeof SearchBookmarksSchema>;
+export type DeleteBookmarkParams = z.infer<typeof DeleteBookmarkSchema>;
 export type UpdateBookmarkParams = z.infer<typeof UpdateBookmarkSchema>;
 
 // APIレスポンスの型
