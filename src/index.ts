@@ -25,12 +25,12 @@ const server = new Server(
   },
 );
 
-// ツール一覧の定義
+// Define list of tools
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return { tools };
 });
 
-// ツール実行のハンドリング
+// Handle tool execution
 server.setRequestHandler(
   CallToolRequestSchema,
   async (request: CallToolRequest) => {
@@ -83,6 +83,7 @@ server.setRequestHandler(
         const formattedResults = results.items
           .map(
             (item) => `
+ID: ${item._id}
 Title: ${item.title}
 URL: ${item.link}
 Tags: ${item.tags?.length ? item.tags.join(", ") : "No tags"}
@@ -215,7 +216,7 @@ Created: ${new Date(item.created).toLocaleString()}
   },
 );
 
-// サーバー起動
+// Start server
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);

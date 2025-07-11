@@ -68,6 +68,7 @@ describe("RaindropAPI", () => {
           Promise.resolve({
             items: [
               {
+                _id: 12345,
                 title: "Example",
                 link: "https://example.com",
                 tags: ["test"],
@@ -97,6 +98,7 @@ describe("RaindropAPI", () => {
       expect(result).toEqual({
         items: [
           {
+            _id: 12345,
             title: "Example",
             link: "https://example.com",
             tags: ["test"],

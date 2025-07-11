@@ -48,6 +48,7 @@ export type UpdateBookmarkParams = z.infer<typeof UpdateBookmarkSchema>;
 
 // APIレスポンスの型
 export interface RaindropItem {
+  _id: number;
   title: string;
   link: string;
   tags?: string[];

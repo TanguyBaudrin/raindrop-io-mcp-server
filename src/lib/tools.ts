@@ -36,7 +36,7 @@ export const tools: Tool[] = [
       properties: {
         query: {
           type: "string",
-          description: "Search query",
+          description: "Search query (empty for no query)",
         },
         tags: {
           type: "array",
